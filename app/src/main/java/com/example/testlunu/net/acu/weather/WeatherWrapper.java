@@ -61,73 +61,7 @@ class Cooling {
 }
 
 
-class Day {
 
-    @SerializedName("Icon")
-    @Expose
-    public Integer icon;
-    @SerializedName("IconPhrase")
-    @Expose
-    public String iconPhrase;
-    @SerializedName("HasPrecipitation")
-    @Expose
-    public Boolean hasPrecipitation;
-    @SerializedName("ShortPhrase")
-    @Expose
-    public String shortPhrase;
-    @SerializedName("LongPhrase")
-    @Expose
-    public String longPhrase;
-    @SerializedName("PrecipitationProbability")
-    @Expose
-    public Integer precipitationProbability;
-    @SerializedName("ThunderstormProbability")
-    @Expose
-    public Integer thunderstormProbability;
-    @SerializedName("RainProbability")
-    @Expose
-    public Integer rainProbability;
-    @SerializedName("SnowProbability")
-    @Expose
-    public Integer snowProbability;
-    @SerializedName("IceProbability")
-    @Expose
-    public Integer iceProbability;
-    @SerializedName("Wind")
-    @Expose
-    public Wind wind;
-    @SerializedName("WindGust")
-    @Expose
-    public WindGust windGust;
-    @SerializedName("TotalLiquid")
-    @Expose
-    public TotalLiquid totalLiquid;
-    @SerializedName("Rain")
-    @Expose
-    public Rain rain;
-    @SerializedName("Snow")
-    @Expose
-    public Snow snow;
-    @SerializedName("Ice")
-    @Expose
-    public Ice ice;
-    @SerializedName("HoursOfPrecipitation")
-    @Expose
-    public Integer hoursOfPrecipitation;
-    @SerializedName("HoursOfRain")
-    @Expose
-    public Integer hoursOfRain;
-    @SerializedName("HoursOfSnow")
-    @Expose
-    public Integer hoursOfSnow;
-    @SerializedName("HoursOfIce")
-    @Expose
-    public Integer hoursOfIce;
-    @SerializedName("CloudCover")
-    @Expose
-    public Integer cloudCover;
-
-}
 
 class DegreeDaySummary {
 
@@ -501,19 +435,7 @@ class Snow_ {
 
 }
 
-class Speed {
 
-    @SerializedName("Value")
-    @Expose
-    public Float value;
-    @SerializedName("Unit")
-    @Expose
-    public String unit;
-    @SerializedName("UnitType")
-    @Expose
-    public Integer unitType;
-
-}
 
 class Speed_ {
 
@@ -576,19 +498,7 @@ class Sun {
 
 
 
-class TotalLiquid {
 
-    @SerializedName("Value")
-    @Expose
-    public Integer value;
-    @SerializedName("Unit")
-    @Expose
-    public String unit;
-    @SerializedName("UnitType")
-    @Expose
-    public Integer unitType;
-
-}
 
 class TotalLiquid_ {
 
@@ -604,16 +514,7 @@ class TotalLiquid_ {
 
 }
 
-class Wind {
 
-    @SerializedName("Speed")
-    @Expose
-    public Speed speed;
-    @SerializedName("Direction")
-    @Expose
-    public Direction direction;
-
-}
 
 class WindGust {
 

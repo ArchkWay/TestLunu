@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testlunu.R
 import com.example.testlunu.db.CitySaved
-import com.example.testlunu.net.acu.cityinfo.CityWrapper
 import kotlinx.android.synthetic.main.city_item.view.*
 
 class CityAdapter internal constructor(
@@ -41,7 +40,7 @@ class CityAdapter internal constructor(
         }
     }
 
-    internal fun setItems(item: CitySaved) {
+    internal fun addItem(item: CitySaved) {
         this.objects += item
         notifyDataSetChanged()
     }
