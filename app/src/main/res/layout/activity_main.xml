@@ -5,15 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rvMain"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -38,9 +42,5 @@
         app:layout_constraintEnd_toStartOf="@id/btnAdd"
         android:hint="@string/enter_city_name"
         />
-    <FrameLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

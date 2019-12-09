@@ -4,17 +4,17 @@ import androidx.lifecycle.LiveData
 
 class CityRepository(private val cityDao: CityDao) {
 
-    val allCities: LiveData<List<com.example.testlunu.db.CitySaved>> = cityDao.fetchAll()
+    val allCities: LiveData<List<CitySaved>> = cityDao.fetchAll()
 
-    suspend fun insert(arg: com.example.testlunu.db.CitySaved) {
+    suspend fun insert(arg: CitySaved) {
         cityDao.insert(arg)
     }
 
-    suspend fun update(arg: com.example.testlunu.db.CitySaved) {
+    suspend fun update(arg: CitySaved) {
         cityDao.update(arg)
     }
 
-    suspend fun delete(arg: com.example.testlunu.db.CitySaved) {
+    suspend fun delete(arg: CitySaved) {
         cityDao.delete(arg)
     }
 }

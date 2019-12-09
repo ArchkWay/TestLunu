@@ -1,7 +1,9 @@
 package com.example.testlunu.db
 
+import android.os.Parcelable
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import kotlinx.android.parcel.Parcelize
 
 @Entity
 data class CitySaved(
@@ -12,12 +14,12 @@ data class CitySaved(
     var windSpeed: String
 ) {
     override fun toString(): String {
-        return "CarNote(uid=$uid, name='$name', temperature='$temperature', humidity='$humidity', windSpeed='$windSpeed' )"
+        return "CityNote(uid=$uid, name='$name', temperature='$temperature', humidity='$humidity', windSpeed='$windSpeed' )"
     }
 }
 
 @Dao
-interface CityDao {
+interface CityDao  {
 
     @Query("select * from CitySaved")
     fun fetchAll(): LiveData<List<CitySaved>>
@@ -32,3 +34,9 @@ interface CityDao {
     suspend fun delete(arg: CitySaved)
 
 }
+
+@Parcelize
+data class CityParcel(var name: String, var temperature: String, var humidity: String, var windSpeed: String) : Parcelable
+
+
+
