@@ -24,9 +24,6 @@ class BaseApp : Application() {
         }
 
     companion object {
-        val INTENT_TITLE = "intent_title"
-        val INTENT_DESC = "intent_desc"
-
         operator fun get(ctx: Context): BaseApp {
             return ctx.applicationContext as BaseApp
         }

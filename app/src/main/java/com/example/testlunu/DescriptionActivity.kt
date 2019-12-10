@@ -8,15 +8,15 @@ import kotlinx.android.synthetic.main.description_info.*
 
 class DescriptionActivity : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.description_info)
         val item = intent.getParcelableExtra<CityParcel>("city_save")
-
-        tvCityNameInfo.text = item.name
-        tvHumidity.text = item.humidity
-        tvWindSpeed.text = item.windSpeed
-        tvTemperature.text = item.temperature
+        with(item) {
+            tvCityNameInfo.text = name
+            tvHumidity.text = getString(R.string.humidity).plus(" $humidity")
+            tvWindSpeed.text = getString(R.string.wind_speed).plus(" $windSpeed")
+            tvTemperature.text = getString(R.string.wind_speed).plus(" $temperature")
+        }
     }
 }

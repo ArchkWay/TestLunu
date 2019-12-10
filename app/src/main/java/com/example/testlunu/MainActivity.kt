@@ -20,6 +20,7 @@ import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
+
 class MainActivity : AppCompatActivity(), CityAdapter.TouchEvent {
 
 
@@ -57,6 +58,7 @@ class MainActivity : AppCompatActivity(), CityAdapter.TouchEvent {
                     first = true
                 }
             }
+            cityViewModel.allCities.removeObservers(this)
         })
     }
 
@@ -86,6 +88,7 @@ class MainActivity : AppCompatActivity(), CityAdapter.TouchEvent {
                             if (!cities.contains(city)) {
                                 cityViewModel.insert(city)
                             }
+                            cityViewModel.allCities.removeObservers(this)
                         })
                     }
             } else Toast.makeText(this, "Incorrect", LENGTH_SHORT).show()
@@ -99,10 +102,6 @@ class MainActivity : AppCompatActivity(), CityAdapter.TouchEvent {
             CityParcel(item.name, item.temperature, item.humidity, item.windSpeed)
         )
         startActivity(intent)
-    }
-
-    override fun onHold(item: CitySaved) {
-        cityViewModel.delete(item)
     }
 }
 

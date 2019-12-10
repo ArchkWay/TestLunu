@@ -2,9 +2,9 @@
     <string name="app_name">TestLunu</string>
     <string name="add_new_city">Add new City</string>
     <string name="enter_city_name">Enter city name</string>
-    <string name="wind_speed">Скорость верта:</string>
-    <string name="humidity">Влажность:</string>
+    <string name="wind_speed">Скорость верта: </string>
+    <string name="humidity">Осадки: </string>
     <string name="_22">+22</string>
-    <string name="temperature">Температура сегодня:</string>
+    <string name="temperature">Температура сегодня: </string>
     <string name="no_data">нет данных</string>
 </resources>

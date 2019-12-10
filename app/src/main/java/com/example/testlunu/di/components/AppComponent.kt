@@ -9,5 +9,4 @@ import javax.inject.Singleton
 @Component(modules = [MvpModule::class])
 interface AppComponent {
     fun inject(activity: MainActivity?) //    void inject(MainNewsPresenter presenter);
-//    void inject(MainNewsVActivity view);
 }

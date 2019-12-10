@@ -15,8 +15,6 @@ class CityAdapter internal constructor(
 
     interface TouchEvent {
         fun onClick(item: CitySaved)
-        fun onHold(item: CitySaved)
-
     }
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
@@ -38,10 +36,6 @@ class CityAdapter internal constructor(
 
         holder.itemView.setOnClickListener {
             touchEvent.onClick(current)
-        }
-        holder.itemView.setOnLongClickListener {
-            touchEvent.onHold(current)
-            return@setOnLongClickListener true
         }
     }
 
