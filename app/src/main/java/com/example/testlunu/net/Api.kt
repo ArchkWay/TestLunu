@@ -9,13 +9,12 @@ import retrofit2.http.Query
 
 interface Api {
         @GET("locations/v1/cities/search")
-    fun getCity(@Query("apikey") apikey: String,  @Query("q") q: String, @Query("language") language:String,
-                @Query("details") details:Boolean ): Observable<List<CityWrapper>>
-
+    fun getCityKey(@Query("apikey") apikey: String, @Query("q") q: String, @Query("language") language:String,
+                   @Query("details") details:Boolean ): Observable<List<CityWrapper>>
 
     @GET("forecasts/v1/daily/1day/{locationKey}")
-    fun getWeather(@Path ("locationKey") locationKey:String, @Query("apikey") apikey: String, @Query("language") language:String, @Query("details") details:Boolean, @Query("metric") metric:Boolean  ): Observable<WeatherWrapper>
-
+    fun getWeather(@Path ("locationKey") locationKey:String, @Query("apikey") apikey: String, @Query("language") language:String, @Query("details") details:Boolean, @Query("metric") metric:Boolean  )
+            : Observable<WeatherWrapper>
 }
 
-val apikey = "YOXTejBu4Qr5mVcqwN1fwJkaHK9jIA4T"
+val apiKey = "tAoYC4MIAO0nVVgYkCMZJ7PohSGC9ZAW"

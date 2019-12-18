@@ -1,10 +1,11 @@
-package com.example.testlunu
+package com.example.testlunu.main
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.testlunu.R
 import com.example.testlunu.db.CitySaved
 import kotlinx.android.synthetic.main.city_item.view.*
 
