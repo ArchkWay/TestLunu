@@ -16,7 +16,7 @@ class DescriptionActivity : AppCompatActivity() {
             tvCityNameInfo.text = name
             tvHumidity.text = getString(R.string.humidity).plus(" $humidity")
             tvWindSpeed.text = getString(R.string.wind_speed).plus(" $windSpeed")
-            tvTemperature.text = getString(R.string.wind_speed).plus(" $temperature")
+            tvTemperature.text = getString(R.string.temperature).plus(" $temperature")
         }
     }
 }

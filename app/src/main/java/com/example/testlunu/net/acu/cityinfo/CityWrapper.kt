@@ -37,5 +37,5 @@ data class CityWrapper (
     @SerializedName("DataSets")
     val dataSets: List<String>,
     @SerializedName("Details")
-    val details: Details)
+    val details: Details?)
 

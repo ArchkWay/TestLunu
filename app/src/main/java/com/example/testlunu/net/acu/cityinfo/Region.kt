@@ -3,7 +3,7 @@ package com.example.testlunu.net.acu.cityinfo
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class Country (
+data class Region (
     @SerializedName("ID")
     @Expose
     var iD: String?,
@@ -13,4 +13,4 @@ data class Country (
     @SerializedName("EnglishName")
     @Expose
     var englishName: String?
-)
+    )

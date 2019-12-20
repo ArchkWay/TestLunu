@@ -4,9 +4,8 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.LifecycleOwner
 import com.example.testlunu.db.CitySaved
 import com.example.testlunu.net.acu.cityinfo.CityWrapper
-import com.example.testlunu.net.acu.weather.WeatherWrapper
+import com.example.testlunu.net.acu.weather.decompiled.WeatherWrapper
 import io.reactivex.Observable
-import java.util.*
 
 interface MainContract {
     interface View {
@@ -19,7 +18,7 @@ interface MainContract {
     interface Presenter : MainContractPresenter<View?>
 
     interface Model {
-        fun getDBCities(fragmentActivity: FragmentActivity, owner: LifecycleOwner): List<CitySaved>?
+        fun getDBCities(fragmentActivity: FragmentActivity, owner: LifecycleOwner)
         fun getDBCiti(): List<CitySaved>?
         fun getCityFromNet (name: String): CitySaved?
         fun addInDb (citySaved: CitySaved?)

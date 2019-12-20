@@ -1,80 +1,76 @@
-package com.example.testlunu.net.acu.cityinfo;
+package com.example.testlunu.net.acu.cityinfo
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
 
-import java.util.List;
-
-public class Details {
-
+data class Details (
     @SerializedName("Key")
     @Expose
-    public String key;
+    var key: String?,
     @SerializedName("StationCode")
     @Expose
-    public String stationCode;
+    var stationCode: String?,
     @SerializedName("StationGmtOffset")
     @Expose
-    public Integer stationGmtOffset;
+    var stationGmtOffset: Int?,
     @SerializedName("BandMap")
     @Expose
-    public String bandMap;
+    var bandMap: String?,
     @SerializedName("Climo")
     @Expose
-    public String climo;
+    var climo: String?,
     @SerializedName("LocalRadar")
     @Expose
-    public String localRadar;
+    var localRadar: String?,
     @SerializedName("MediaRegion")
     @Expose
-    public Object mediaRegion;
+    var mediaRegion: Any?,
     @SerializedName("Metar")
     @Expose
-    public String metar;
+    var metar: String?,
     @SerializedName("NXMetro")
     @Expose
-    public String nXMetro;
+    var nXMetro: String?,
     @SerializedName("NXState")
     @Expose
-    public String nXState;
+    var nXState: String?,
     @SerializedName("Population")
     @Expose
-    public Integer population;
+    var population: Int?,
     @SerializedName("PrimaryWarningCountyCode")
     @Expose
-    public String primaryWarningCountyCode;
+    var primaryWarningCountyCode: String?,
     @SerializedName("PrimaryWarningZoneCode")
     @Expose
-    public String primaryWarningZoneCode;
+    var primaryWarningZoneCode: String?,
     @SerializedName("Satellite")
     @Expose
-    public String satellite;
+    var satellite: String?,
     @SerializedName("Synoptic")
     @Expose
-    public String synoptic;
+    var synoptic: String?,
     @SerializedName("MarineStation")
     @Expose
-    public String marineStation;
+    var marineStation: String?,
     @SerializedName("MarineStationGMTOffset")
     @Expose
-    public Object marineStationGMTOffset;
+    var marineStationGMTOffset: Any?,
     @SerializedName("VideoCode")
     @Expose
-    public String videoCode;
+    var videoCode: String?,
     @SerializedName("LocationStem")
     @Expose
-    public String locationStem;
+    var locationStem: String?,
     @SerializedName("PartnerID")
     @Expose
-    public Object partnerID;
+    var partnerID: Any?,
     @SerializedName("Sources")
     @Expose
-    public List<Source> sources = null;
+    var sources: List<Source>?,
     @SerializedName("CanonicalPostalCode")
     @Expose
-    public String canonicalPostalCode;
+    var canonicalPostalCode: String?,
     @SerializedName("CanonicalLocationKey")
     @Expose
-    public String canonicalLocationKey;
-
-}
+    var canonicalLocationKey: String?
+)
