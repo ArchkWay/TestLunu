@@ -17,5 +17,5 @@ interface Api {
             : Observable<WeatherWrapper>
 }
 
-val apiKey = "JAtD6x3skfHdYMcZlXZhREh05HTocHy2"
+val apiKey = "BSeRJ7szdBgLGRZix1TMUofbdPKAfo8Q"
 //working on ±20 requests, then must to be  refreshed

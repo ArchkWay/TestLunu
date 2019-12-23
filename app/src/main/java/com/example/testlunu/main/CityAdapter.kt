@@ -9,13 +9,11 @@ import com.example.testlunu.R
 import com.example.testlunu.db.CitySaved
 import kotlinx.android.synthetic.main.city_item.view.*
 
-class CityAdapter internal constructor(
-    context: Context,
-    private val touchEvent: TouchEvent
-) : RecyclerView.Adapter<CityAdapter.CityViewHolder>() {
+class CityAdapter internal constructor(context: Context,private val touchEvent: TouchEvent) : RecyclerView.Adapter<CityAdapter.CityViewHolder>() {
 
     interface TouchEvent {
         fun onClick(item: CitySaved)
+        fun onHold(item: CitySaved)
     }
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
@@ -38,6 +36,16 @@ class CityAdapter internal constructor(
         holder.itemView.setOnClickListener {
             touchEvent.onClick(current)
         }
+
+        holder.itemView.setOnLongClickListener {
+            touchEvent.onHold(current)
+            return@setOnLongClickListener true
+        }
+    }
+
+    fun delete(citySaved: CitySaved){
+        this.objects -= citySaved
+        notifyDataSetChanged()
     }
 
     internal fun addItem(item: CitySaved) {

@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">TestLunu</string>
-    <string name="add_new_city">Add new City</string>
-    <string name="enter_city_name">Enter city name</string>
+    <string name="app_name">Прогноз погоды</string>
+    <string name="add_new_city">Добавить</string>
+    <string name="enter_city_name">Введите название города</string>
     <string name="wind_speed">Скорость ветра: </string>
     <string name="humidity">Осадки: </string>
     <string name="_22">+22</string>

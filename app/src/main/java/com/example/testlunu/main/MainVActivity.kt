@@ -4,8 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.testlunu.BaseApp
 import com.example.testlunu.DescriptionActivity
 import com.example.testlunu.R
@@ -55,12 +57,22 @@ class MainVActivity : AppCompatActivity(), CityAdapter.TouchEvent, MainContract.
         startActivity(intent)
     }
 
+    override fun onHold(item: CitySaved) {
+        val items = arrayOf("Удалить")
+        AlertDialog.Builder(this)
+            .setTitle("Хотите удалить запись?")
+            .setItems(items) { p0, idx ->
+                when (idx) {
+                    0 -> {
+                        presenter.deleteItemFromDB(item)
+                        cityAdapter.delete(item)
+                    }
+                }
+            }.show()
+    }
+
     override fun setCities(listCities: List<CitySaved?>?) {
-        listCities?.forEach {
-            if (it != null) {
-                cityAdapter.addItem(it)
-            }
-        }
+        listCities?.forEach { if (it != null) { cityAdapter.addItem(it) } }
     }
 
     override fun setCity(citySaved: CitySaved?) {

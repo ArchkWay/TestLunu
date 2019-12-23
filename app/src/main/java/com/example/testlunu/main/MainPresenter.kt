@@ -36,6 +36,10 @@ class MainPresenter @Inject constructor(context: Context) : Presenter, DirectCon
         model.addInDb(citySaved)
     }
 
+    override fun deleteItemFromDB(citySaved: CitySaved) {
+        model.delete(citySaved)
+    }
+
 
     override fun detachView() {
         view = null

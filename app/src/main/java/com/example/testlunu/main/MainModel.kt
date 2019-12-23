@@ -91,6 +91,10 @@ class MainModel @Inject constructor(context: Context) : MainContract.Model {
         })
     }
 
+    override fun delete(citySaved: CitySaved) {
+        cityViewModel.delete(citySaved)
+    }
+
     override fun getCityKey(name: String): Observable<List<CityWrapper>> {
         val error = mutableListOf<CityWrapper>()
         error += CityWrapper(

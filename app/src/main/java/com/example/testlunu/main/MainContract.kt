@@ -22,6 +22,7 @@ interface MainContract {
         fun getDBCiti(): List<CitySaved>?
         fun getCityFromNet (name: String): CitySaved?
         fun addInDb (citySaved: CitySaved?)
+        fun delete(citySaved: CitySaved)
 
         fun getCityKey(name: String): Observable<List<CityWrapper>>
         fun getCityData(key: String): Observable <WeatherWrapper>

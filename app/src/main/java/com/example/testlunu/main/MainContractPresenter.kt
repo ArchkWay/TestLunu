@@ -8,7 +8,7 @@ interface MainContractPresenter<V> {
     fun checkAndAddIfNot(mvpView: V, fragmentActivity: FragmentActivity, owner: LifecycleOwner)
     fun attachCity(mvpView: V, nameCity: String?)
     fun addItemToDb(mvpView: V, citySaved: CitySaved)
-
+    fun deleteItemFromDB(citySaved: CitySaved)
     fun getCity(mvp: V, nameCity: String?)
 
 
