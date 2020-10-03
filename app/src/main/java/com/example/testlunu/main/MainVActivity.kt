@@ -23,18 +23,14 @@ class MainVActivity : AppCompatActivity(), CityAdapter.TouchEvent, MainContract.
 
 
     @Inject
-    lateinit var provider: RetrofitProvider
-    @Inject
     lateinit var presenter: MainContract.Presenter
 
     private lateinit var cityAdapter: CityAdapter
-    private lateinit var api: Api
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         BaseApp[this].injector?.inject(this)
-        api = provider.api
         cityAdapter = CityAdapter(this, this)
         rvMain.adapter = cityAdapter
         rvMain.layoutManager = LinearLayoutManager(this)
